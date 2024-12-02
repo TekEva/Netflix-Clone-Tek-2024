@@ -1,0 +1,82 @@
+.header-outer-container{
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(148, 132, 132); */
+    background-color:  rgb(20, 20, 20);
+    background-color: transparent;
+    height: 10vh;
+    
+    transition:all 0.5s;
+    transition-timing-function: ease-in;
+    z-index: 1;
+    /* background-color: red; */
+}
+/* .nav__black{
+    background-color:  rgb(20, 20, 20);
+} */
+.header-container{
+    width: 90%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellow; */
+}
+.header-container .left-header ul{
+    width: 140%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    /* background-color: lightblue; */
+}
+.header-container .right-header ul{
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+     align-items: center;
+    /* background-color: lightgreen; */
+}
+
+/* Tablet view (width less than 768px) */
+@media (max-width: 768px) {
+    .header-container {
+        width: 95%; /* Make it take more width on smaller screens */
+    }
+
+    .header-container .left-header ul,
+    .header-container .right-header ul {
+        width: 100%; /* Reduce the width to fit better on smaller screens */
+    }
+
+    .header-container .left-header,
+    .header-container .right-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Stack items vertically */
+    }
+}
+
+/* Mobile view (width less than 480px) */
+@media (max-width: 480px) {
+    .header-container {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .header-container .left-header ul,
+    .header-container .right-header ul {
+        width: 100%;
+        flex-direction: column; /* Stack lists vertically */
+    }
+
+    .header-container .left-header li,
+    .header-container .right-header li {
+        margin: 5px 0; /* Space between list items for better readability */
+    }
+}
