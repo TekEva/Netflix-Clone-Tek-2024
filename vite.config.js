@@ -1,10 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import dotenv from "dotenv";// import dotenv package for hiding environmental variables
-// run package config
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv'; // Import dotenv for environment variables
+
+// Load environment variables
 dotenv.config();
-// https://vite.dev/config/
+
 export default defineConfig({
   plugins: [react()],
-  //define process env
+  base: '/Netflix-Clone-Tek-2024/', // Set to your repository name for deployment
+  build: {
+    outDir: 'dist', // Ensure output goes to 'dist'
+  },
 });
+
